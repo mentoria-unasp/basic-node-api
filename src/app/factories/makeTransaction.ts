@@ -2,7 +2,7 @@ import TransactionController from "../controllers/TransactionController";
 import TransactionRepository from "../repositories/TransactionRepository";
 import CreateTransactionUseCase from "../usecases/CreateTransactionUseCase";
 
-const transactionFactory = () => {
+const makeTransaction = () => {
   const transactionsRepository = new TransactionRepository();
   const createTransactionUseCase = new CreateTransactionUseCase(transactionsRepository);
   const transactionsController = new TransactionController(createTransactionUseCase);
@@ -14,4 +14,4 @@ const transactionFactory = () => {
   }
 }
 
-export default transactionFactory;
+export default makeTransaction;

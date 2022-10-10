@@ -1,9 +1,9 @@
 import { Router } from "express";
 import routeControllerAdapter from "../adapters/routeControllerAdapter";
-import transactionFactory from "../factories/makeTransaction";
+import makeTransaction from "../factories/makeTransaction";
 const transactionRoutes = Router();
 
-const { transactionsController } = transactionFactory();
+const { transactionsController } = makeTransaction();
 
 transactionRoutes.get("/", routeControllerAdapter(transactionsController));
 
