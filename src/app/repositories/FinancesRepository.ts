@@ -1,6 +1,8 @@
 class FinancesRepository {
   listAll() {
-    return ['oi']
+    return {
+      ok: true
+    }
   }
 }
 
