@@ -1,6 +1,7 @@
+import { IUseCase } from "../interfaces/IUseCase";
 import FinancesRepository from "../repositories/FinancesRepository";
 
-class CreateFinancesUseCase {
+class CreateFinancesUseCase implements IUseCase {
   constructor(private financesRepository: FinancesRepository) { }
 
   execute() {
