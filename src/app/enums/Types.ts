@@ -1,6 +1,6 @@
 enum Types {
-  DEBIT = "Débito",
-  CREDIT = "Crédito"
+  REVENUE = "Receita",
+  SPEND = "Dispesa"
 }
 
 export default Types; 

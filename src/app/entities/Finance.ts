@@ -1,20 +1,23 @@
 import Types from "../enums/Types";
 import IFinance from "../interfaces/IFinance";
 
-class Finance {
-  private type: Types;
-  private value: number;
-  private name: string;
+class Transaction {
+  type: Types;
+  value: number;
+  name: string;
+  userAccountId: number;
 
   constructor({
     name,
     type,
-    value
+    value,
+    userAccountId
   }: IFinance) {
     this.name = name;
     this.type = type;
     this.value = value;
+    this.userAccountId = userAccountId;
   }
 }
 
-export default Finance;
+export default Transaction;
