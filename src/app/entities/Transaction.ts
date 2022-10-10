@@ -1,5 +1,5 @@
 import Types from "../enums/Types";
-import IFinance from "../interfaces/IFinance";
+import ITransaction from "../interfaces/ITransaction";
 
 class Transaction {
   type: Types;
@@ -12,7 +12,7 @@ class Transaction {
     type,
     value,
     userAccountId
-  }: IFinance) {
+  }: ITransaction) {
     this.name = name;
     this.type = type;
     this.value = value;

@@ -1,10 +1,10 @@
 import Types from "../enums/Types";
 
-interface IFinance {
+interface ITransaction {
   type: Types;
   value: number;
   name: string;
   userAccountId: number;
 }
 
-export default IFinance;
+export default ITransaction;

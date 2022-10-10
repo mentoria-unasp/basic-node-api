@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import ApplicationConstants from './constants/ApplicationConstants'
-import { financesRoutes, userRoutes } from './routes';
+import { transactionRoutes, userAccountRoutes } from './routes';
 
 
 class Server {
@@ -20,8 +20,8 @@ class Server {
   }
 
   setupRoutes() {
-    this.app.use(financesRoutes);
-    this.app.use(userRoutes);
+    this.app.use(transactionRoutes);
+    this.app.use(userAccountRoutes);
   }
 
   start() {

@@ -1,2 +1,2 @@
-export { default as financesRoutes } from "./financesRoutes";
-export { default as userRoutes } from "./userRoutes";
+export { default as transactionRoutes } from "./transactionRoutes";
+export { default as userAccountRoutes } from "./userAccountRoutes";
