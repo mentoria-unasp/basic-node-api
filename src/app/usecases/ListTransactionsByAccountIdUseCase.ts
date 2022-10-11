@@ -1,14 +1,14 @@
 import { IUseCase } from "../interfaces/IUseCase";
 import TransactionRepository from "../repositories/TransactionRepository";
 
-class CreateTransactionUseCase implements IUseCase {
+class ListTransactionsByAccountIdUseCase implements IUseCase {
   constructor(private transactionRepository: TransactionRepository) { }
 
-  execute() {
-    const result = this.transactionRepository.create();
+  execute(userId: number) {
+    const result = this.transactionRepository.listAllByUserAccountId(userId);
 
     return result;
   }
 }
 
-export default CreateTransactionUseCase;
+export default ListTransactionsByAccountIdUseCase;

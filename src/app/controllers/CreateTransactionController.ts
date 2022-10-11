@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { IController } from "../interfaces/IController";
 import CreateTransactionsUseCase from "../usecases/CreateTransactionUseCase";
 
-class TransactionsController implements IController {
+class CreateTransactionController implements IController {
   constructor(private createTransactionsUseCase: CreateTransactionsUseCase) { }
 
   async requestHandler(request: Request, response: Response) {
@@ -13,4 +13,4 @@ class TransactionsController implements IController {
 
 }
 
-export default TransactionsController;
+export default CreateTransactionController;

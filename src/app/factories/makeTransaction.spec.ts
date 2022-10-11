@@ -1,7 +1,7 @@
-import TransactionsController from "../controllers/TransactionController";
+import TransactionsController from "../controllers/CreateTransactionController";
 import TransactionsRepository from "../repositories/TransactionRepository";
 import CreateTransactionsUseCase from "../usecases/CreateTransactionUseCase";
-import makeTransaction from "./makeTransaction"
+import makeTransaction from "./makeCreateTransaction"
 
 const makeSut = () => {
   return makeTransaction();

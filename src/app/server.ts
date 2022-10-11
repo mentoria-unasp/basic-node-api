@@ -20,8 +20,8 @@ class Server {
   }
 
   setupRoutes() {
-    this.app.use(transactionRoutes);
-    this.app.use(userAccountRoutes);
+    this.app.use("/transactions", transactionRoutes);
+    this.app.use("/userAccount", userAccountRoutes);
   }
 
   start() {

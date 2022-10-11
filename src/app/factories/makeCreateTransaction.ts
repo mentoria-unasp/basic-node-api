@@ -1,17 +1,17 @@
-import TransactionController from "../controllers/TransactionController";
+import TransactionController from "../controllers/CreateTransactionController";
 import TransactionRepository from "../repositories/TransactionRepository";
 import CreateTransactionUseCase from "../usecases/CreateTransactionUseCase";
 
-const makeTransaction = () => {
+const makeCreateTransaction = () => {
   const transactionsRepository = new TransactionRepository();
   const createTransactionUseCase = new CreateTransactionUseCase(transactionsRepository);
-  const transactionsController = new TransactionController(createTransactionUseCase);
+  const createTransactionsController = new TransactionController(createTransactionUseCase);
 
   return {
     transactionsRepository,
     createTransactionUseCase,
-    transactionsController
+    createTransactionsController
   }
 }
 
-export default makeTransaction;
+export default makeCreateTransaction;

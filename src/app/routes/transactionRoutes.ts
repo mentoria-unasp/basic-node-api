@@ -1,10 +1,14 @@
 import { Router } from "express";
 import routeControllerAdapter from "../adapters/routeControllerAdapter";
-import makeTransaction from "../factories/makeTransaction";
+import makeCreateTransaction from "../factories/makeCreateTransaction";
+import makeListTransactionsByAccountIdTransaction from "../factories/makeListTransactionsByAccountIdTransaction";
 const transactionRoutes = Router();
 
-const { transactionsController } = makeTransaction();
+const { createTransactionsController } = makeCreateTransaction();
+const { listTransactionsByAccountIdController } = makeListTransactionsByAccountIdTransaction();
 
-transactionRoutes.get("/", routeControllerAdapter(transactionsController));
+transactionRoutes.post("/", routeControllerAdapter(createTransactionsController));
+
+transactionRoutes.get("/:userId", routeControllerAdapter(listTransactionsByAccountIdController));
 
 export default transactionRoutes;
